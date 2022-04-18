@@ -1,10 +1,4 @@
 from turtle import Turtle
-MOVE_DISTANCE = 5
-UP = 90
-DOWN = 270
-
-
-
 
 
 class Paddle(Turtle):

@@ -15,7 +15,6 @@ def ball_movement(ball, velocity):
 def brick_collision(ball, velocity, bricklist, scoreboard):
     for brick in bricklist:
         if abs(ball.xcor()-brick.xcor()) < 25 and abs(ball.ycor()-brick.ycor()) < 15:
-            print(abs(ball.xcor()-brick.xcor()))
             if abs(ball.xcor() - brick.xcor())/ (5/3) < abs(ball.ycor() - brick.ycor()):
                 velocity['yvelocity'] *= -1
                 scoreboard.add_score(brick)
@@ -30,7 +29,6 @@ def brick_collision(ball, velocity, bricklist, scoreboard):
 def paddle_collision(ball, velocity, paddle):
     if ball.distance(paddle) < 100 and ball.ycor() < -300:
         velocity['total_velocity'] = sqrt(velocity['xvelocity']**2+velocity['yvelocity']**2)
-        print(f"hyp={velocity['total_velocity']}")
         if ball.xcor()-paddle.xcor() > 0:
             theta = atan(50/(ball.xcor()-paddle.xcor()))
             velocity['xvelocity'] = velocity['total_velocity'] * cos(theta)
