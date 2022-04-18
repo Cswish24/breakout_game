@@ -9,7 +9,7 @@ class Starter(Turtle):
         self.goto(0, 0)
         self.color("white")
 
-
+    # countdown before starting game and upon resetting due to missing ball with paddle
     def countdown(self):
         self.clear()
         self.write(arg="Ready", align="center", move=False, font= ("Arial", 14, "normal"))
