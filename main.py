@@ -59,8 +59,6 @@ def barriers(ball, velocity, starter, scoreboard):
 
 
 
-
-
 screen = Screen()
 
 screen.setup(width=1200, height=700)
@@ -102,10 +100,6 @@ screen.listen()
 screen.onkeypress(paddle.lt, "a")
 screen.onkeypress(paddle.rt, "s")
 game_is_on = True
-
-
-
-
 
 
 while game_is_on == True:
